@@ -1,25 +1,54 @@
 /* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+html{
+  padding: 0px;
 }
 
-.menu:before {
-  content: "[";
+body{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
 }
 
-.menu:after {
-  content: "]";
+.title_bar{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  top: 0px;
+  background-color: rgba(0,0,0,.75);
 }
 
-.menu > li {
-  display: inline;
+.logo-img{
+  position: relative;
+  height: auto;
+  width: 10%;
+  background: grey;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.main{
+  padding-top: 50px;
+}
+
+.view{
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.page-title{
+  position: relative;
+  width: 1000px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  background-color: grey;
+}
+
+.content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }

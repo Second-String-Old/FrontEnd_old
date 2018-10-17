@@ -1,1 +1,15 @@
-<p>This is the partial for view 1.</p>
+<html ng-app="view1" ng-controller = "view1Ctrl">
+    <head>
+        <title>Stat Sheet</title>
+    </head>
+    <body>
+        <table class="playerTable">
+            <!--FIX sortType-->
+            <tr ng-repeat = 'player in players | orderBy :sortType'>
+                <td>{{player.lname}}, {{player.fname}}</td>
+                <td>{{player.pos}}</td>
+                <td>{{player.team}}</td>
+            </tr>
+        </table>
+    </body>
+</html>

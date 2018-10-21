@@ -1,9 +1,42 @@
 <!--this is the home screen-->
-<div class = "view">
-    <div class = "page-title">
-        <h1 class = "page-title-label">Welcome to Second String</h1>
-    </div>
+<div class = "page-title">
+    <h1 class = "page-title-label">Welcome to Second String</h1>
+</div>
+<div class = "container">
+    <!--Container is will have two components, the blog and the widgets-->
     <div class = "content">
-        
+        <h1 class = "blog-title">Second String Blog</h1>
+        <div class = "blog-content">
+            <!--this is a placeholder blog, will be dynamically read later-->
+            <div class = "blog-post">
+                <p class = "blog-name" style = "font-size:25px; font-weight:bold">This is blog 1</p>
+                <p class = "author">Author: <span class = "author-name">Gabe</span></p>
+                <p class = "blog-time"><span class = "glyphicon glyphicon-time"></span>Posted at 10pm</p>
+                <p class = "blog-text">Gabe is a cool ass guy who should get a raise</p>
+            </div>
+            <div class = "blog-post">
+                <p class = "blog-name" style = "font-size:25px; font-weight:bold">This is blog 1</p>
+                <p class = "author">Author: <span class = "author-name">Gabe</span></p>
+                <p class = "blog-time"><span class = "glyphicon glyphicon-time"></span>Posted at 10pm</p>
+                <p class = "blog-text">Gabe is a cool ass guy who should get a raise</p>
+            </div>
+        </div>
+    </div>
+    <div class = "widget-bar">
+        <div class = "widget" id = "wsearch">
+            <p class = "widget-label">Search</p>
+            <div class = "input-group">
+                <input type = "text" class = "search-input">
+                <span class = "input-group-button">
+                    <button class = "btn btn-default" type = "button">
+                        <span class = "glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class = "widget" id = "wsort">WSort</div>
+        <div class = "widget" id = "wnote">Wnote</div>
     </div>
 </div>
+
+

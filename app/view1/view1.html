@@ -1,15 +1,54 @@
-<html ng-app="view1" ng-controller = "view1Ctrl">
-    <head>
-        <title>Stat Sheet</title>
-    </head>
-    <body>
-        <table class="playerTable">
-            <!--FIX sortType-->
+<html ng-app="view1" ng-controller="view1Ctrl">
+
+<head>
+  <title>Stat Sheet</title>
+</head>
+
+<body>
+  <span class="label"> Ordered By: {{sortType}}, Reverse Sort: {{reverseSort}}</span>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>
+          <a href="#" ng-click="sortType='lname'; reverseSort = !reverseSort">
+            Last Name <span ng-show="sortType == 'lname'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+          </a>
+        </th>
+        <th>
+          <a href="#" ng-click="sortType='fname'; reverseSort = !reverseSort">
+            First Name <span ng-show="sortType == 'fname'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+          </a>
+        </th>
+        <th>
+          <a href="#" ng-click="sortType='pos'; reverseSort = !reverseSort">
+            Position <span ng-show="sortType == 'pos'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+          </a>
+        </th>
+        <th>
+          <a href="#" ng-click="sortType='team'; reverseSort = !reverseSort">
+            Team <span ng-show="sortType == 'team'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+          </a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="player in players | orderBy:sortType:reverseSort">
+        <td>{{player.lname}}</td>
+        <td>{{player.fname}}</td>
+        <td>{{player.pos}}</td>
+        <td>{{player.team}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!--<table class="table table-bordered playerTable">
             <tr ng-repeat = 'player in players | orderBy :sortType'>
                 <td>{{player.lname}}, {{player.fname}}</td>
                 <td>{{player.pos}}</td>
                 <td>{{player.team}}</td>
             </tr>
-        </table>
-    </body>
+        </table>-->
+
+</body>
+
 </html>

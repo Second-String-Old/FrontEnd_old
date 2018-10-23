@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+var view1 = angular.module('myApp.view1', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {
@@ -17,5 +17,6 @@ angular.module('myApp.view1', ['ngRoute'])
     , {fname:"Colin", lname:"Williamson", pos:"QB", team:"Warm End"}
     , {fname:"Crisp", lname:"McCulloch", pos:"WR", team:"Warm End"}
   ];
-  $scope.sortType = 'lname';
+  $scope.sortType = 'team';
+  $scope.reverseSort = true;
 });
